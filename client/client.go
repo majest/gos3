@@ -33,6 +33,7 @@ func NewClient(bucketName, accessKey, secretKey, awsRegionName string) (*S3Clien
 		fmt.Printf("Region: '%s'\n", awsRegionName)
 	}
 
+	//fmt.Printf("%s:%s", accessKey, secretKey)
 	// Authenticate
 	auth, err := aws.GetAuth(accessKey, secretKey, "", time.Time{})
 
